@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 from sqlalchemy import create_engine
 from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
 
 
@@ -19,13 +19,13 @@ def load_data(database_filepath):
     return X,Y
 
 def build_model():
-    rf = RandomForestRegressor(n_estimators = 100, random_state = 42)
+    rf = RandomForestClassifier(n_estimators = 100, random_state = 42)
     return rf
     
 
 def evaluate_model(model, X_test, Y_test):
     Y_pred = model.predict(X_test)
-    print('\n',classification_report(Y_test,np.round(abs(Y_pred))))
+    print('\n',classification_report(Y_test,Y_pred))
 
 
 def save_model(model, model_filepath):
