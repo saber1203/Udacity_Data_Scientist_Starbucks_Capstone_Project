@@ -63,3 +63,6 @@ python app/run.py
 ```
 4. Go to http://localhost:3001/ to check the result
 5. User info input example: {'gender':1, 'age':35,'income':50000, 'memberdays':1}
+6. Output is the probability of user completed by each offer:
+![image](https://user-images.githubusercontent.com/8360742/137703150-9fe8191f-de0c-4314-b29b-13250d4aee32.png)
+
