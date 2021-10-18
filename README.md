@@ -62,3 +62,4 @@ python models/train_classifier.py data/user_offer_matrix.db models/recommendatio
 python app/run.py
 ```
 4. Go to http://localhost:3001/ to check the result
+5. User info input example: {'gender':1, 'age':35,'income':50000, 'memberdays':1}
