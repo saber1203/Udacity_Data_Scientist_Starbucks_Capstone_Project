@@ -1,0 +1,36 @@
+<style type="text/css">
+.mytable{
+
+width: 200px;
+height: 100px;
+text-align: center;
+margin: 0 auto;
+
+}
+</style>
+{% extends "master.html" %}
+{% block title %}Results{% endblock %}
+
+{% block message %}
+    <hr />
+    <h4 class="text-center">User Info</h4>
+    <p class="text-center"><i>{{query}}</i></p>
+{% endblock %}
+
+{% block content %}
+        <table class=mytable border="1">
+            <tr>
+              <th>Offer_id</th>
+              <th>Pred_completed</th>
+            </tr>
+            {% for category, classification in classification_result.items() %}
+            <tr>
+                  <td>{{category}}</td>
+                  <td>{{classification}}</td>
+            </tr>
+            {% endfor %}
+            </table>
+        </div>
+    </div>
+
+{% endblock %}
