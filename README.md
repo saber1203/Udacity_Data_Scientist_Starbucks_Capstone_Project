@@ -10,5 +10,54 @@ There are three json datasets provided by Udacity, these data sets contain simul
 2. profile.json — demographic data for each customer
 3. transcript.json — records for transactions, offers received, offers viewed, and offers completed
 
-Details please refer to [Starbucks_Capstone_notebook.ipynb](Starbucks_Capstone_notebook.ipynb)
+**Data cleaning, exploration, visualization and modeling** please refer to [Starbucks_Capstone_notebook.ipynb](Starbucks_Capstone_notebook.ipynb)
 
+## Summary
+1. Offer 2 and offer 10 has the highest completed rate, Offer 2 is discount 7-3, Offer 10 is discount 10-2.
+2. Income in range(60000,80000) has higher offer completed transactions.
+3. Most of users became Starbucks within 5 years from now.
+4. Random Forest model has the best performance among those 6 models (Decision Tree, Support Vector Machine, Naive Bayes, Random Forest, K-Nearest Neighbors, LogisticRegression), I plan to use it to recommend offer for users.
+
+# How to Run the Recommondation web application
+
+## Install Apps
+1. Anaconda
+2. Python 3
+
+## Steps to setup environment
+1. Open Terminal
+2. Go to project directory
+```
+cd project_path
+```
+3. Create virtual python env
+```
+python3 -m venv env_name
+```
+4. Activate the virtual env
+```
+source env_name/bin/activate
+```
+5. Install necessary packages
+```
+pip install flask pandas plotly gunicorn nltk sklearn sqlalchemy
+```
+6. Go to workspace folder
+```
+cd workspace
+```
+Now the environment is ready to run the app.
+
+# Step to run the web application
+1. Data processing
+```
+python data/process_data.py data/portfolio.json data/profile.json data/transcript.json data/user_offer_matrix.db
+```
+2. Model training
+```
+python models/train_classifier.py data/user_offer_matrix.db models/recommendation.pkl
+```
+3. Run the app
+```
+python app/run.py
+```
