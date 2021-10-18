@@ -62,7 +62,8 @@ python models/train_classifier.py data/user_offer_matrix.db models/recommendatio
 python app/run.py
 ```
 4. Go to http://localhost:3001/ to check the result
-5. User info input example: {'gender':1, 'age':35,'income':50000, 'memberdays':1}
-6. Output is the probability of user completed each offer:
+<img src="https://user-images.githubusercontent.com/8360742/137706110-4b66c4bc-fb46-4cea-9b79-6b8d5143684d.png" width="800" />
+6. User info input example: {'gender':1, 'age':35,'income':50000, 'memberdays':1}
+7. Output is the probability of user completed each offer:
 <img src="https://user-images.githubusercontent.com/8360742/137703150-9fe8191f-de0c-4314-b29b-13250d4aee32.png" width="500" />
 
