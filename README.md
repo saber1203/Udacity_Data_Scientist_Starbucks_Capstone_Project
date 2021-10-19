@@ -4,19 +4,10 @@ Make recommendation system for Starbucks Offer
 ## Project Overview
 This project is Udacity Starbucks Capstone Challenge in Data Scientist Course. I made a machine learning model which predicted offer completed for each customer based on user profiels, offer portfolio and transcript data. Based on the ML model, I made a recommendation web application for Starbucks on how to recommend offer to a user.
 
-## Data Overview
-There are three json datasets provided by Udacity, these data sets contain simulated data that mimics customer behavior on the Starbucks rewards mobile app. 
-1. portfolio.json — containing offer ids and meta data about each offer (duration, type, etc.)
-2. profile.json — demographic data for each customer
-3. transcript.json — records for transactions, offers received, offers viewed, and offers completed
-
-**Data cleaning, exploration, visualization and modeling** please refer to [Starbucks_Capstone_notebook.ipynb](Starbucks_Capstone_notebook.ipynb)
+**Data sets, Data cleaning, exploration, visualization and modeling** please refer to [Starbucks_Capstone_notebook.ipynb](Starbucks_Capstone_notebook.ipynb)
 
 ## Summary
-1. Offer 2 and offer 10 has the highest completed rate, Offer 2 is discount 7-3, Offer 10 is discount 10-2.
-2. Income in range(60000,80000) has higher offer completed transactions.
-3. Most of users became Starbucks within 5 years from now.
-4. Random Forest model has the best performance among those 6 models (Decision Tree, Support Vector Machine, Naive Bayes, Random Forest, K-Nearest Neighbors, LogisticRegression), I plan to use it to recommend offer for users.
+Random Forest model has the best performance among those 6 models (Decision Tree, Support Vector Machine, Naive Bayes, Random Forest, K-Nearest Neighbors, LogisticRegression), I use it to recommend offer for users.
 
 # How to Run the Recommondation web application
 
